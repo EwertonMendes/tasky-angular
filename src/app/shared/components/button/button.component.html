@@ -1,0 +1,15 @@
+<button
+  [id]="id"
+  [type]="type"
+  [disabled]="disabled"
+  (click)="onClick()"
+  [ngClass]="ButtonColors[color]"
+>
+  <ng-container *ngIf="icon && !loading">
+    <i class="material-icons">{{ icon }}</i>
+  </ng-container>
+  <ng-container *ngIf="loading">
+    <i class="material-icons loading">refresh</i>
+  </ng-container>
+  {{ text }}
+</button>

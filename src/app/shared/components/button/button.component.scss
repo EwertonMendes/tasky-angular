@@ -1,0 +1,95 @@
+@import '../../../../styles/colors.scss';
+
+$paddingX: 24px;
+$paddingY: 10px;
+
+button {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: $paddingY $paddingX;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: Montserrat, sans-serif !important;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 !important;
+
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: inherit;
+    background-color: inherit;
+
+    &.loading {
+      animation: spin 1s linear infinite;
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
+.primary {
+  background-color: $color-highlight-1;
+  color: $neutral-500;
+
+  &:hover {
+    background-color: $hover-highlight-1;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.16;
+  }
+}
+
+.primary-outline {
+  background-color: transparent;
+  border: 1px solid $neutral-900;
+  color: $neutral-500;
+
+  &:hover {
+    border-color: $hover-highlight-1;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.16;
+  }
+}
+
+.dark {
+  background-color: $neutral-800;
+  color: $neutral-100;
+}
+
+.borderless {
+  background-color: transparent;
+  color: $neutral-900;
+  border: unset;
+
+  &:hover {
+    background-color: $neutral-200;
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.16;
+  }
+}
