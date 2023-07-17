@@ -19,6 +19,20 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "paths": {
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
+      ]
+    },
     "lib": [
       "ES2022",
       "dom"
