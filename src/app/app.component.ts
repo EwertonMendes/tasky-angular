@@ -14,8 +14,8 @@ export class AppComponent {
     this.textInputValue = newValue;
   }
 
-  bla() {
-    console.log('bla');
+  onButtonClick() {
+    console.log('Button Clicked');
   }
 
 }
