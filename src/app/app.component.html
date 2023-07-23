@@ -1,33 +1,69 @@
-<div class="examples">
+<div class="page-container">
   <h1>Tasky Angular Works</h1>
-  <h3>Buttons</h3>
-  <div class="button-container">
-    <app-button
-      id="btn-test-1"
-      (buttonClick)="bla()"
-      text="Botão teste"
-      color="PRIMARY"
-    />
+  <div class="examples-container">
+    <h3>Buttons</h3>
+    <div class="button-container">
+      <app-button
+        id="btn-test-1"
+        (buttonClick)="bla()"
+        text="Botão teste"
+        color="PRIMARY"
+      />
 
-    <app-button
-      id="btn-test-2"
-      (buttonClick)="bla()"
-      text="Botão teste"
-      color="PRIMARY_OUTLINE"
-    />
+      <app-button
+        id="btn-test-2"
+        (buttonClick)="bla()"
+        text="Botão teste"
+        color="PRIMARY_OUTLINE"
+      />
 
-    <app-button
-      id="btn-test-3"
-      (buttonClick)="bla()"
-      text="Botão teste"
-      color="DARK"
-    />
+      <app-button
+        id="btn-test-3"
+        (buttonClick)="bla()"
+        text="Botão teste"
+        color="DARK"
+      />
 
-    <app-button
-      id="btn-test-3"
-      (buttonClick)="bla()"
-      text="Botão teste"
-      color="BORDERLESS"
-    />
+      <app-button
+        id="btn-test-3"
+        (buttonClick)="bla()"
+        text="Botão teste"
+        color="BORDERLESS"
+      />
+    </div>
+  </div>
+  <div class="examples-container">
+    <h3>Inputs</h3>
+    <span>Last input text: {{ textInputValue }}</span>
+    <div class="input-container">
+      <app-input
+        label="Primary input"
+        type="text"
+        placeholder="Hello!"
+        color="primary"
+        (onValueChange)="onTextInputValueChange($event)"
+      />
+      <app-input
+        label="Secondary input"
+        type="text"
+        placeholder="Hello!"
+        color="secondary"
+        (onValueChange)="onTextInputValueChange($event)"
+      />
+      <app-input
+        label="Tertiary input"
+        type="text"
+        placeholder="Hello!"
+        color="tertiary"
+        (onValueChange)="onTextInputValueChange($event)"
+      />
+      <app-input
+        label="Dark input"
+        type="text"
+        placeholder="Hello!"
+        color="dark"
+        (onValueChange)="onTextInputValueChange($event)"
+      />
+    </div>
   </div>
 </div>

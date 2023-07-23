@@ -1,0 +1,17 @@
+<div class="app-input-container">
+  <label
+    *ngIf="label"
+    class="input-label"
+    >{{ label }}</label
+  >
+  <input
+    [type]="type"
+    [placeholder]="placeholder ? placeholder : ''"
+    (maxlength)="(maxLength)"
+    (minlength)="(minLength)"
+    class="input-field"
+    [ngClass]="['input-field', colorScheme[color]]"
+    [(ngModel)]="value"
+  />
+  <button *ngIf="value" (click)="clearInput()" class="clear-button">X</button>
+</div>

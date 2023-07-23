@@ -1,0 +1,84 @@
+@import '../../../../styles/colors.scss';
+
+.app-input-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  .input-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $neutral-900;
+  }
+
+  .input-field {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $neutral-900;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    padding-right: 30px;
+
+    &.primary {
+      border: 1px solid $color-highlight-1;
+
+      &:focus {
+        border: 1px solid $hover-highlight-1;
+        box-shadow: 0 0 5px $hover-highlight-1;
+      }
+    }
+
+    &.secondary {
+      border: 1px solid $color-highlight-2;
+
+      &:focus {
+        border: 1px solid $hover-highlight-2;
+        box-shadow: 0 0 5px $hover-highlight-2;
+      }
+    }
+
+    &.tertiary {
+      border: 1px solid $color-highlight-3;
+
+      &:focus {
+        border: 1px solid $hover-highlight-3;
+        box-shadow: 0 0 5px $hover-highlight-3;
+      }
+    }
+
+    &.dark {
+      border: 1px solid $neutral-800;
+
+      &:focus {
+        border: 1px solid $hover-dark-mode-1;
+        box-shadow: 0 0 5px $hover-dark-mode-1;
+      }
+    }
+
+    &::placeholder {
+      text-align: center;
+    }
+  }
+
+  .clear-button {
+    position: absolute;
+    border: unset;
+    width: 20px;
+    transform: translate(1250%, 80%);
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: $neutral-500;
+    }
+  }
+
+}
+
+
