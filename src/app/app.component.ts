@@ -10,6 +10,8 @@ export class AppComponent {
 
   textInputValue: string = '';
 
+  isModalOpen = false;
+
   onTextInputValueChange(newValue: string) {
     this.textInputValue = newValue;
   }
@@ -18,4 +20,16 @@ export class AppComponent {
     console.log('Button Clicked');
   }
 
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
+  performAction() {
+    alert('Action Performed');
+    this.isModalOpen = false;
+  }
 }

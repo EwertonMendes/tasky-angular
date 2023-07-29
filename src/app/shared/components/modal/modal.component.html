@@ -1,0 +1,28 @@
+<div
+  *ngIf="isOpen"
+  class="modal-container"
+  style="overflow: hidden"
+>
+  <div class="modal">
+    <div class="modal-header">
+      <h3>{{ title }}</h3>
+    </div>
+    <div class="modal-content">
+      <p>{{ content }}</p>
+    </div>
+    <div class="modal-actions">
+      <app-button
+        id="btn-close-modal"
+        [text]="cancelText"
+        color="PRIMARY_OUTLINE"
+        (buttonClick)="cancel()"
+      ></app-button>
+      <app-button
+        id="btn-perform-action"
+        [text]="confirmText"
+        color="PRIMARY"
+        (buttonClick)="performAction()"
+      ></app-button>
+    </div>
+  </div>
+</div>

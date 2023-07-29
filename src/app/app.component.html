@@ -66,4 +66,24 @@
       />
     </div>
   </div>
+  <div class="examples-container">
+    <h3>Modal</h3>
+    <div class="input-container">
+       <app-button
+        id="btn-open-modal-1"
+        (buttonClick)="openModal()"
+        text="Open Modal"
+        color="PRIMARY"
+      />
+      <app-modal
+        [isOpen]="isModalOpen"
+        [title]="'Example Modal'"
+        [content]="'Example Modal content'"
+        [cancelText]="'Cancel'"
+        [confirmText]="'Confirm'"
+        (onCancel)="closeModal()"
+        (onPerformAction)="performAction()"
+      ></app-modal>
+    </div>
+  </div>
 </div>

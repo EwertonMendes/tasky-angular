@@ -4,11 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from './components/button/button.component';
 import { InputComponent } from './components/input/input.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
     ButtonComponent,
-    InputComponent
+    InputComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { InputComponent } from './components/input/input.component';
     FormsModule,
     ReactiveFormsModule,
     ButtonComponent,
-    InputComponent
+    InputComponent,
+    ModalComponent
   ],
 })
 export class SharedModule {}
