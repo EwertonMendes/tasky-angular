@@ -6,29 +6,62 @@
       <app-button
         id="btn-test-1"
         (buttonClick)="onButtonClick()"
-        text="Botão teste"
+        text="Test button"
         color="PRIMARY"
       />
 
       <app-button
         id="btn-test-2"
         (buttonClick)="onButtonClick()"
-        text="Botão teste"
+        text="Test button"
         color="PRIMARY_OUTLINE"
       />
 
       <app-button
         id="btn-test-3"
         (buttonClick)="onButtonClick()"
-        text="Botão teste"
+        text="Test button"
         color="DARK"
       />
 
       <app-button
         id="btn-test-3"
         (buttonClick)="onButtonClick()"
-        text="Botão teste"
+        text="Test button"
         color="BORDERLESS"
+      />
+    </div>
+    <div class="button-container">
+      <app-button
+        id="btn-icon-test-1"
+        (buttonClick)="onButtonClick()"
+        text="Icon button"
+        color="PRIMARY"
+        leftIcon="ph-bold ph-bell-simple-ringing"
+      />
+
+      <app-button
+        id="btn-icon-test-2"
+        (buttonClick)="onButtonClick()"
+        text="Icon button"
+        color="PRIMARY_OUTLINE"
+        leftIcon="ph-bold ph-alien"
+      />
+
+      <app-button
+        id="btn-icon-test-3"
+        (buttonClick)="onButtonClick()"
+        text="Icon button"
+        color="DARK"
+        leftIcon="ph-bold ph-bone"
+      />
+
+      <app-button
+        id="btn-icon-test-3"
+        (buttonClick)="onButtonClick()"
+        text="Icon button"
+        color="BORDERLESS"
+        leftIcon="ph-bold ph-cloud-check"
       />
     </div>
   </div>
@@ -69,7 +102,7 @@
   <div class="examples-container">
     <h3>Modal</h3>
     <div class="input-container">
-       <app-button
+      <app-button
         id="btn-open-modal-1"
         (buttonClick)="openModal()"
         text="Open Modal"
