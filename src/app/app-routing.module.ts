@@ -6,6 +6,11 @@ import { TaskListComponent } from './modules/task-list/task-list.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'components',
+    pathMatch: 'full'
+  },
+  {
+    path: 'components',
     component: ComponentListComponent
   },
   {

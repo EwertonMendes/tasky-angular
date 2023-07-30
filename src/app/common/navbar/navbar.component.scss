@@ -1,0 +1,57 @@
+@import '../../../styles/colors.scss';
+
+.navbar-container {
+  background-color: $neutral-100;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 5%);
+  border: 1px solid $neutral-300;
+
+  .navbar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 10px 20px 10px 20px;
+
+    .navbar-logo {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $neutral-900;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      .logo {
+        width: 50px;
+      }
+    }
+
+    .navbar-menu {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+
+      &-item {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #000;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+       &:hover {
+        color: $hover-highlight-1;
+      }
+
+        .active {
+          color: $color-highlight-1;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+}
