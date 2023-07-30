@@ -13,5 +13,13 @@
         <a routerLink="/tasks">Tasks</a>
       </div>
     </div>
+    <div class="navbar-actions">
+      <app-button
+      class="app-navbar-button"
+      [leftIcon]="isDarkThemeEnabled ? 'ph-bold ph-sun' : 'ph-bold ph-moon'"
+      (buttonClick)="changeTheme()"
+      color="BORDERLESS"
+    />
+    </div>
   </div>
 </div>

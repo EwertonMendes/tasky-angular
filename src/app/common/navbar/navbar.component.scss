@@ -16,7 +16,6 @@
     .navbar-logo {
       font-size: 1.5rem;
       font-weight: 500;
-      color: $neutral-900;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
@@ -55,6 +54,17 @@
           margin-right: 5px;
         }
       }
+    }
+  }
+}
+
+:host-context(.dark-theme) {
+  .navbar-container {
+    background-color: $dark-mode-tertiary;
+    border: 1px solid $dark-mode-secondary;
+
+    .navbar-menu-item {
+      color: $neutral-100;
     }
   }
 }

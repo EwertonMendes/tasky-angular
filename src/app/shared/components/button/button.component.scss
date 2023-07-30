@@ -93,3 +93,55 @@ button {
     opacity: 0.16;
   }
 }
+
+:host-context(.dark-theme) {
+  .primary {
+    background-color: $color-highlight-1;
+    color: $neutral-600;
+
+    &:hover {
+      background-color: $hover-highlight-1;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.16;
+    }
+  }
+
+  .primary-outline {
+    border: 1px solid $neutral-900;
+    color: $neutral-100;
+
+    &:hover {
+      border-color: $hover-highlight-1;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.16;
+    }
+  }
+
+  .dark {
+    background-color: $neutral-800;
+    color: $neutral-100;
+  }
+
+  .borderless {
+    background-color: transparent;
+    color: $neutral-100;
+    border: unset;
+
+    &:hover {
+      background-color: $dark-mode-secondary;
+      opacity: 0.8;
+    }
+
+    &:disabled {
+      color: $dark-mode-neutral;
+      pointer-events: none;
+      opacity: 0.16;
+    }
+  }
+}

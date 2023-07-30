@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     padding-right: 30px;
+    background-color: transparent;
 
     &.primary {
       border: 1px solid $color-highlight-1;
@@ -78,7 +79,63 @@
       color: $neutral-500;
     }
   }
-
 }
 
+:host-context(.dark-theme) {
+  .app-input-container {
+    .input-label {
+      color: $neutral-100;
+    }
 
+    .input-field {
+      color: $neutral-100;
+
+      &.primary {
+        border: 1px solid $color-highlight-1;
+
+        &:focus {
+          border: 1px solid $hover-highlight-1;
+          box-shadow: 0 0 5px $hover-highlight-1;
+        }
+      }
+
+      &.secondary {
+        border: 1px solid $color-highlight-2;
+
+        &:focus {
+          border: 1px solid $hover-highlight-2;
+          box-shadow: 0 0 5px $hover-highlight-2;
+        }
+      }
+
+      &.tertiary {
+        border: 1px solid $color-highlight-3;
+
+        &:focus {
+          border: 1px solid $hover-highlight-3;
+          box-shadow: 0 0 5px $hover-highlight-3;
+        }
+      }
+
+      &.dark {
+        border: 1px solid $neutral-800;
+
+        &:focus {
+          border: 1px solid $hover-dark-mode-1;
+          box-shadow: 0 0 5px $hover-dark-mode-1;
+        }
+      }
+
+      &::placeholder {
+        color: $neutral-400;
+      }
+    }
+
+    .clear-button {
+      color: $neutral-100;
+      &:hover {
+        color: $neutral-300;
+      }
+    }
+  }
+}

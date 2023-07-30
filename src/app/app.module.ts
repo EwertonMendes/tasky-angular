@@ -6,6 +6,7 @@ import { SharedModule } from './shared/shared.module';
 import { ComponentListComponent } from './modules/component-list/component-list.component';
 import { TaskListComponent } from './modules/task-list/task-list.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
+import { ThemeService } from './core/services/theme-service/theme.service';
 
 @NgModule({
   declarations: [AppComponent, ComponentListComponent, TaskListComponent, NavbarComponent],
@@ -14,4 +15,9 @@ import { NavbarComponent } from './common/navbar/navbar.component';
   bootstrap: [AppComponent],
   exports: [NavbarComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private readonly themeService: ThemeService) {
+    const savedThemeOption = this.themeService.getIsDarkThemeFromLocalStorage();
+    this.themeService.enableDarkTheme(savedThemeOption);
+  }
+}
