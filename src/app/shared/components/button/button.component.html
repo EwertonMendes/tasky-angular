@@ -2,7 +2,7 @@
   [type]=""
   [disabled]="disabled"
   (click)="onClick()"
-  [ngClass]="ButtonColors[color]"
+  [ngClass]="[ButtonColors[color], ButtonSizes[size]]"
 >
   <div *ngIf="isLeftIconImg; else iconContainer">
     <img
@@ -13,7 +13,10 @@
   </div>
   <ng-template #iconContainer>
     <ng-container *ngIf="leftIcon && !loading">
-      <i class="left-icon" [ngClass]="leftIcon"></i>
+      <i
+        class="left-icon"
+        [ngClass]="leftIcon"
+      ></i>
     </ng-container>
   </ng-template>
 
@@ -22,6 +25,9 @@
   </ng-container>
   {{ text }}
   <ng-container *ngIf="rightIcon && !loading">
-    <i class="right-icon" [ngClass]="rightIcon"></i>
+    <i
+      class="right-icon"
+      [ngClass]="rightIcon"
+    ></i>
   </ng-container>
 </button>

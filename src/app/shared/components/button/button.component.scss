@@ -1,7 +1,16 @@
 @import '../../../../styles/colors.scss';
 
-$paddingX: 24px;
-$paddingY: 10px;
+$smaller-paddingX: 8px;
+$smaller-paddingY: 8px;
+
+$small-paddingX: 16px;
+$small-paddingY: 8px;
+
+$medium-paddingX: 24px;
+$medium-paddingY: 10px;
+
+$large-paddingX: 32px;
+$large-paddingY: 12px;
 
 button {
   border: none;
@@ -9,19 +18,18 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: $paddingY $paddingX;
   cursor: pointer;
   border-radius: 6px;
   font-family: Montserrat, sans-serif !important;
   font-size: 14px;
   font-weight: 600;
-  margin: 0 !important;
+  background-color: transparent;
+  color: inherit;
 
   i {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 8px;
     font-size: 16px;
     width: 16px;
     height: 16px;
@@ -42,6 +50,30 @@ button {
       }
     }
   }
+}
+
+.smaller {
+  min-width: 35px;
+  min-height: 35px;
+  padding: $smaller-paddingY $smaller-paddingX;
+}
+
+.small {
+  min-width: 50px;
+  min-height: 35px;
+  padding: $small-paddingY $small-paddingX;
+}
+
+.medium {
+  min-width: 70px;
+  min-height: 35px;
+  padding: $medium-paddingY $medium-paddingX;
+}
+
+.large {
+  min-width: 100px;
+  min-height: 35px;
+  padding: $large-paddingY $large-paddingX;
 }
 
 .primary {
@@ -91,6 +123,15 @@ button {
   &:disabled {
     pointer-events: none;
     opacity: 0.16;
+  }
+
+  .nocolor {
+    border: unset;
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.16;
+    }
   }
 }
 

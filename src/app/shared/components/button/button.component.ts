@@ -1,11 +1,19 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { GlobalEventEmitterService } from '@app/core/services/global-event-emmiter/global-event-emitter.service';
 
+export enum ButtonSizes {
+  SMALLER = 'smaller',
+  SMALL = 'small',
+  MEDIUM = 'medium',
+  LARGE = 'large',
+}
+
 export enum ButtonColors {
   PRIMARY = 'primary',
   PRIMARY_OUTLINE = 'primary-outline',
   DARK = 'dark',
   BORDERLESS = 'borderless',
+  NOCOLOR = 'nocolor',
 }
 
 @Component({
@@ -21,9 +29,11 @@ export class ButtonComponent implements OnInit {
   @Input() leftIcon!: string;
   @Input() rightIcon?: string;
   @Input() color: keyof typeof ButtonColors = 'PRIMARY';
+  @Input() size: keyof typeof ButtonSizes = 'MEDIUM';
   @Input() action?: { name: string; args: unknown };
   @Input() loading?: boolean;
   ButtonColors = ButtonColors;
+  ButtonSizes = ButtonSizes;
 
   @Output() buttonClick: EventEmitter<never> = new EventEmitter<never>();
 
