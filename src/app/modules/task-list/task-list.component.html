@@ -1,1 +1,17 @@
-<p>task-list works!</p>
+<div class="page-header-container">
+  <h1>My Tasks</h1>
+</div>
+<div class="page-content-container">
+  <div class="page-tasklist-container">
+    <div class="tasklist-header">
+      <i [class]="isExpanded ? 'ph-bold ph-caret-up' : 'ph-bold ph-caret-down'" (click)="toggleExpanded()"></i>
+      <h2>My List 1</h2>
+    </div>
+    <div *ngIf="isExpanded" class="tasklist-content">
+      <app-card
+        title="My task 1"
+        description="Task Description"
+      ></app-card>
+    </div>
+  </div>
+</div>
