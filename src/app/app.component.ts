@@ -5,31 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'tasky-angular';
-
-  textInputValue: string = '';
-
-  isModalOpen = false;
-
-  onTextInputValueChange(newValue: string) {
-    this.textInputValue = newValue;
-  }
-
-  onButtonClick() {
-    console.log('Button Clicked');
-  }
-
-  openModal() {
-    this.isModalOpen = true;
-  }
-
-  closeModal() {
-    this.isModalOpen = false;
-  }
-
-  performAction() {
-    alert('Action Performed');
-    this.isModalOpen = false;
-  }
-}
+export class AppComponent {}

@@ -1,0 +1,89 @@
+<div class="page-container">
+  <h1>System Component Showcase</h1>
+  <div class="examples-container">
+    <h3>Buttons</h3>
+    <div class="button-container">
+      <app-button
+        id="btn-test-1"
+        (buttonClick)="onButtonClick()"
+        text="Botão teste"
+        color="PRIMARY"
+      />
+
+      <app-button
+        id="btn-test-2"
+        (buttonClick)="onButtonClick()"
+        text="Botão teste"
+        color="PRIMARY_OUTLINE"
+      />
+
+      <app-button
+        id="btn-test-3"
+        (buttonClick)="onButtonClick()"
+        text="Botão teste"
+        color="DARK"
+      />
+
+      <app-button
+        id="btn-test-3"
+        (buttonClick)="onButtonClick()"
+        text="Botão teste"
+        color="BORDERLESS"
+      />
+    </div>
+  </div>
+  <div class="examples-container">
+    <h3>Inputs</h3>
+    <span>Last input text: {{ textInputValue }}</span>
+    <div class="input-container">
+      <app-input
+        label="Primary input"
+        type="text"
+        placeholder="Hello!"
+        color="primary"
+        (onValueChange)="onTextInputValueChange($event)"
+      />
+      <app-input
+        label="Secondary input"
+        type="text"
+        placeholder="Hello!"
+        color="secondary"
+        (onValueChange)="onTextInputValueChange($event)"
+      />
+      <app-input
+        label="Tertiary input"
+        type="text"
+        placeholder="Hello!"
+        color="tertiary"
+        (onValueChange)="onTextInputValueChange($event)"
+      />
+      <app-input
+        label="Dark input"
+        type="text"
+        placeholder="Hello!"
+        color="dark"
+        (onValueChange)="onTextInputValueChange($event)"
+      />
+    </div>
+  </div>
+  <div class="examples-container">
+    <h3>Modal</h3>
+    <div class="input-container">
+       <app-button
+        id="btn-open-modal-1"
+        (buttonClick)="openModal()"
+        text="Open Modal"
+        color="PRIMARY"
+      />
+      <app-modal
+        [isOpen]="isModalOpen"
+        [title]="'Example Modal'"
+        [content]="'Example Modal content'"
+        [cancelText]="'Cancel'"
+        [confirmText]="'Confirm'"
+        (onCancel)="closeModal()"
+        (onPerformAction)="performAction()"
+      ></app-modal>
+    </div>
+  </div>
+</div>
