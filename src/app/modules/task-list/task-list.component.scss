@@ -12,18 +12,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   &-tasklist-container {
     margin-left: auto;
     margin-right: auto;
     padding: 2%;
+    margin-bottom: 40px;
     width: 90%;
     min-height: 2 00px;
     background-color: $neutral-100;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
     box-shadow: 0 1px 2px rgba($color: $neutral-900, $alpha: 5%);
     border: 1px solid $neutral-300;
@@ -39,6 +42,29 @@
         cursor: pointer;
       }
     }
+
+    .tasklist-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      app-button {
+        background-color: $neutral-300;
+        color: $color-highlight-1;
+        border-radius: 8px;
+      }
+    }
+
+    .tasklist-content-card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
   }
 }
 
@@ -46,5 +72,9 @@
   .page-tasklist-container {
     background-color: $dark-mode-tertiary;
     border: unset;
+
+    app-button {
+      background-color: $dark-mode-secondary;
+    }
   }
 }

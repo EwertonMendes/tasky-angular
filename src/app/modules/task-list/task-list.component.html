@@ -2,16 +2,38 @@
   <h1>My Tasks</h1>
 </div>
 <div class="page-content-container">
-  <div class="page-tasklist-container">
+  <div
+    *ngFor="let tasklist of tasklists"
+    class="page-tasklist-container"
+  >
     <div class="tasklist-header">
-      <i [class]="isExpanded ? 'ph-bold ph-caret-up' : 'ph-bold ph-caret-down'" (click)="toggleExpanded()"></i>
-      <h2>My List 1</h2>
+      <i
+        [class]="tasklist.isExpanded ? 'ph-bold ph-caret-up' : 'ph-bold ph-caret-down'"
+        (click)="toggleExpanded(tasklist.id)"
+      ></i>
+      <h2>{{ tasklist.name }}</h2>
     </div>
-    <div *ngIf="isExpanded" class="tasklist-content">
-      <app-card
-        title="My task 1"
-        description="Task Description"
-      ></app-card>
+    <div
+      *ngIf="tasklist.isExpanded"
+      class="tasklist-content-container"
+    >
+      <div
+        class="tasklist-content"
+        *ngFor="let task of tasklist.tasks"
+      >
+        <app-button
+          color="NOCOLOR"
+          size="SMALLER"
+          [leftIcon]="task.isComplete ? 'ph-bold ph-check-fat' : ''"
+          (buttonClick)="toggleComplete(tasklist.id, task.id)"
+        ></app-button>
+        <div class="tasklist-content-card-container">
+          <tasklist-card
+            [title]="task.name"
+            [description]="task.description"
+          ></tasklist-card>
+        </div>
+      </div>
     </div>
   </div>
 </div>
