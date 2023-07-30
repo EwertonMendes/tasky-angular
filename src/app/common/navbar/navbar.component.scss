@@ -32,6 +32,10 @@
       align-items: center;
       justify-content: center;
 
+      .active {
+        color: $color-highlight-1;
+      }
+
       &-item {
         font-size: 1.2rem;
         font-weight: 500;
@@ -39,17 +43,16 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
-       &:hover {
-        color: $hover-highlight-1;
-      }
-
-        .active {
-          color: $color-highlight-1;
+        &:hover {
+          color: $hover-highlight-1;
         }
-
         a {
           text-decoration: none;
           color: inherit;
+        }
+
+        i {
+          margin-right: 5px;
         }
       }
     }
