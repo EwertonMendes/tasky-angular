@@ -7,6 +7,7 @@
   <div *ngIf="isLeftIconImg; else iconContainer">
     <img
       class="left-icon"
+      [ngClass]="[leftIcon && text ? 'left-icon-spacing' : '']"
       [src]="leftIcon"
       alt="left icon"
     />
@@ -15,7 +16,7 @@
     <ng-container *ngIf="leftIcon && !loading">
       <i
         class="left-icon"
-        [ngClass]="leftIcon"
+        [ngClass]="[leftIcon && text ? 'left-icon-spacing' : '', leftIcon]"
       ></i>
     </ng-container>
   </ng-template>
@@ -27,7 +28,7 @@
   <ng-container *ngIf="rightIcon && !loading">
     <i
       class="right-icon"
-      [ngClass]="rightIcon"
+       [ngClass]="[leftIcon && text ? 'right-icon-spacing' : '', rightIcon]"
     ></i>
   </ng-container>
 </button>
